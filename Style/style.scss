@@ -1,0 +1,145 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-shadow: border-box;
+    text-decoration: none;
+    color: #000;
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+body {
+    overflow: hidden;
+}
+
+.wrapper {
+    background: linear-gradient(to right, #26233bbe, #26233bbe), url("../assets/wallaper.jpg");
+    background-position: center center;
+    background-size: cover;
+}
+
+.container {
+    width: 1024px;
+    max-width: 100%;
+
+    margin: 0 auto;
+}
+
+.intro {
+    min-height: 100vh;
+}
+
+.header {
+    width: 100%;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 15px 0;
+}
+
+.header a {
+    color: #fff;
+    transition: color 0.2s linear;
+}
+
+.header a:hover {
+    position: relative;
+
+    color: #f25a29;
+}
+
+.header__logo {
+    font-size: 1.2rem;
+}
+
+.header__menu {
+    width: 50%;
+}
+.menu {
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 1rem;
+}
+.menu__item {
+    transition: all 0.5s linear;
+}
+
+.menu__item::after {
+    content: "";
+    width: 100%;
+    height: 2px;
+
+    position: absolute;
+
+    background-color: #f25a29;
+    left: 0;
+    bottom: -5px;
+}
+
+.intro__info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    height: 65vh;
+}
+
+.intro__title {
+    font-size: 3em;
+    color: #fff;
+    margin: 75px 0;
+}
+
+.btn {
+    padding: 15px;
+
+    color: #fff;
+    background-color: #f25a29;
+
+    border: 2px solid #f25a29;
+    border-radius: 12px;
+
+    transition: all 0.3s linear;
+}
+
+.btn:hover {
+    background-color: #fff;
+    border-color: #fff;
+
+    color: #f25a29;
+}
+
+.btn_intro {
+    width: 175px;
+    text-align: center;
+}
+
+
+@media (max-width: 768px) {
+
+    .wrapper {
+        padding: 18px;
+    }
+
+    .header .header__menu  {
+        display: none;
+    }
+
+    .header__logo {
+        width: 100%;
+        
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .intro__title {
+        font-size: 2em;
+        text-align: center;
+    }
+}
