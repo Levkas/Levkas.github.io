@@ -1,0 +1,213 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    color: #000;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+    background-color: #143861;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #f25a29;
+    border-radius: 9em;
+    box-shadow: inset 1px 1px 10px #4e9bda;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #253861;
+}
+
+.container {
+    width: 1024px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.section__title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.title {
+    margin: 75px 0;
+    font-size: 3em;
+    text-align: center;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+/* Blocks */
+.intro {
+    min-height: 100vh;
+    background: linear-gradient(to right, #26233bbe, #26233bbe), url("../img/wallaper.jpg");
+    background-position: center center;
+    background-size: cover;
+}
+
+.header {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+}
+
+.header a {
+    color: #fff;
+    transition: color 0.2s linear;
+}
+
+.header a:hover {
+    color: #f25a29;
+}
+
+.header__logo {
+    font-size: 1.2rem;
+}
+
+.header__menu {
+    width: 50%;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 1rem;
+}
+
+.menu__item {
+    transition: all 0.5s linear;
+    position: relative;
+}
+
+.menu__item::after {
+    content: "";
+    width: 0;
+    height: 2px;
+    position: absolute;
+    background-color: #fff;
+    left: 0;
+    bottom: -5px;
+    transition: all .2s linear;
+}
+
+.menu__item:hover::after {
+    width: 100%;
+    background-color: #f25a29;
+    transition: all .2s linear;
+}
+
+.btn {
+    padding: 15px;
+    color: #fff;
+    background-color: #f25a29;
+    border: 2px solid #f25a29;
+    border-radius: 12px;
+    transition: all 0.3s linear;
+}
+
+.btn:hover {
+    background-color: #fff;
+    border-color: #fff;
+    color: #f25a29;
+}
+
+.btn_intro {
+    width: 175px;
+    text-align: center;
+}
+
+.section__title-intro {
+    height: 65vh;
+}
+
+.title_intro {
+    color: #fff;
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
+    }
+
+    .header .header__menu {
+        display: none;
+    }
+
+    .header__logo {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .title {
+        font-size: 2em;
+        text-align: center;
+    }
+}
+
+.benefits {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.categories {
+    display: flex;
+    justify-content: space-between;
+}
+
+.categories__item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.item__image {
+    width: 50px;
+    height: 50px;
+    margin: 25px 0;
+}
+
+.image-data {
+    background: url("../img/data-collection.png");
+    background-position: center center;
+    background-size: cover;
+}
+
+.item__title {
+    color: #000;
+    font-size: 1.2em;
+    font-weight: 700;
+    text-align: center;
+}
+
+.item__subtitle {
+    padding: 25px;
+    color: #000;
+    font-size: 0.8em;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .categories {
+        flex-direction: column;
+    }
+}
